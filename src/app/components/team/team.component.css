@@ -1,0 +1,153 @@
+.divPrincipal {
+    margin: 120px auto 30px auto;
+    max-width: 1200px;
+    background-color: rgb(39, 39, 39);
+    padding: 24px 175px;
+}
+
+.sobreNosotrosContainer p {
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+    color: rgba(221, 223, 230);
+}
+
+.sobreNosotrosContainer {
+    margin-top: 30px;
+}
+
+h3 {
+    color: rgba(235, 237, 236);
+    text-align: center;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(221, 223, 230);
+    padding-top: 20px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    color: rgba(235, 237, 236);
+    margin-top: 30px;
+    width: fit-content;
+    font-size: 35px;
+    margin-left: auto;
+    margin-right: auto;
+    border-bottom: 1px solid rgb(221, 223, 230);
+}
+
+p {
+    color: rgba(235, 237, 236);
+    text-align: center;
+    line-height: 25px;
+}
+
+span {
+    color: rgba(235, 237, 236);
+}
+
+a {
+    color: rgba(235, 237, 236);
+}
+
+.cell-number,
+.mail {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.description {
+    text-align: center;
+}
+
+.divLawyers {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.divHijo {
+    width: 350px;
+    height: 270px;
+    padding: 1.5em;
+    padding-top: 48px;
+    margin: 30px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    border: solid 2.5px rgba(186, 184, 189, 1);
+    justify-content: center;
+    font-family: 'Jost', sans-serif;
+}
+
+.position {
+    display: grid;
+    flex-direction: column;
+    justify-self: center;
+    background-color: rgb(39, 39, 39);
+    margin-bottom: -80px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;
+    justify-content: center;
+    z-index: 1;
+    padding: 16px;
+}
+
+.abogadoCelda {
+    display: grid;
+}
+
+.name {
+    font-size: 23px;
+    text-align: center;
+    color: rgba(235, 237, 236);
+    background-color: rgb(39, 39, 39);
+    width: fit-content;
+    justify-self: center;
+    font-family: 'Lora', serif;
+}
+
+
+/* Responsive */
+
+@media (max-width:800px) {
+    .divPrincipal {
+        display: inline-block;
+        padding: 5px;
+        width: fit-content;
+    }
+    h3 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    p {
+        line-height: 20px;
+    }
+    a {
+        font-size: 16px;
+    }
+    .sobreNosotrosContainer p {
+        font-size: 15px;
+        padding: 10px;
+    }
+    .sobreNosotrosContainer {
+        margin-top: 20px;
+    }
+    .divHijo {
+        width: 300px;
+        height: 300px;
+        margin: 30px auto;
+    }
+    .divLawyers {
+        margin: 25px auto;
+    }
+}

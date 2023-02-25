@@ -1,0 +1,112 @@
+<div class="padre">
+    <div class="animated fadeInUp">
+        <div class="area">
+            <h4>ÁREAS PRÁCTICAS</h4>
+        </div>
+        <div class="reverse contenedor">
+            <div class="hijo">
+                <img src="../../../assets/litigios.jpg" alt="Litigios y Resolución Alternativa de Conflictos" title="Litigios y Resolución Alternativa de Conflictos">
+            </div>
+            <div class="hijo">
+                <h2>Litigios y Resolución Alternativa de Conflictos</h2>
+                <span class="texto">Como parte de los servicios otorgados por el estudio, se encuentra
+                    la resolución de controversias en asuntos civiles, comerciales,
+                    laborales, de familia, administrativos, previsionales, defensa del
+                    consumidor, ejecuciones, concursos y quiebras, entre otros, en los
+                    que la dedicación personal y el conocimiento especializado
+                    resultan decisivos.</span><br/>
+                <span class="texto" *ngIf="mostrarLitigio">Además, nuestros profesionales están capacitados para lograr una
+                    solución pacífica de los conflictos por medio de la negociación,
+                    la mediación y la conciliación, ajustándonos a tus prioridades.</span>
+                <button (click)="mostrarLitigio = !mostrarLitigio" *ngIf="mostrarLitigio == false">Ver más</button>
+                <button (click)="mostrarLitigio= !mostrarLitigio" *ngIf="mostrarLitigio == true">Ver menos</button>
+            </div>
+        </div>
+
+        <div class="contenedor ">
+            <div class="hijo">
+                <h2>Derecho Civil, Sucesorio y de las Familias</h2>
+                <span class="texto">En el ámbito civil brindamos asesoramiento en distintas áreas
+                como responsabilidad civil, daños y perjuicios, sucesiones,
+                testamentos, cesiones de herencia, contratos,fideicomisos,desalojos, entre
+                otros asuntos civiles.</span><br/>
+                <span class="texto" *ngIf="mostrarCivil">En lo que respecta a las relaciones de familia asesoramos a nuestros
+                clientes en materia de divorcios, alimentos, régimen de
+                comunicación y cuidado personal, responsabilidad parental,
+                división de bienes, tutela, designación de apoyos, curatela y
+                medidas de protección.</span>
+                <button (click)="mostrarCivil= !mostrarCivil" *ngIf="mostrarCivil == false">Ver más</button>
+                <button (click)="mostrarCivil= !mostrarCivil" *ngIf="mostrarCivil == true">Ver menos</button>
+            </div>
+            <div class="hijo">
+                <img src="../../../assets/derecho-civil.jpg" alt="Derecho Civil, Sucesorio y de las Familias" title="Derecho Civil, Sucesorio y de las Familias">
+            </div>
+        </div>
+
+
+        <div class="contenedor reverse">
+            <div class="hijo">
+                <img src="../../../assets/derecho-trabajo.jpg" alt="Derecho del Trabajo y de la Seguridad Social" title="Derecho del Trabajo y de la Seguridad Social">
+            </div>
+            <div class="hijo">
+                <h2>Derecho del Trabajo y de la Seguridad Social</h2>
+                <span class="texto">Dentro del ámbito laboral proporcionamos asesoramiento a
+                trabajadores en casos de despidos, renuncias, falta de pago de
+                salarios, deficiente registración de la relación laboral, contratista
+                de viña, servicio doméstico, accidentes de trabajo y
+                enfermedades profesionales e inculpables, etc.</span><br/>
+                <span class="texto" *ngIf="mostrarTrabajo">También acompañamos a nuestros clientes por las distintas etapas
+                que deben sortear ante la Aseguradora de Riesgos del Trabajo (A.R.T.)
+                y las comisiones médicas de la Superintendencia de Riesgos del
+                Trabajo (S.R.T.).
+                A nivel empresarial brindamos asesoramiento en el ámbito de las
+                relaciones individuales de trabajo, como a nivel colectivo o
+                gremial. Para ello contamos con profesionales especializados
+                en la materia con una amplia experiencia en el fuero.</span>
+                <button (click)="mostrarTrabajo = !mostrarTrabajo" *ngIf="mostrarTrabajo== false">Ver más</button>
+                <button (click)="mostrarTrabajo = !mostrarTrabajo" *ngIf="mostrarTrabajo== true">Ver menos</button>
+            </div>
+        </div>
+
+
+        <div class="contenedor ">
+            <div class="hijo">
+                <h2>Derecho Administrativo y Previsional</h2>
+                <span class="texto">Dentro del ámbito del Derecho Administrativo
+                proporcionamos asesoramiento en materia de licitaciones,
+                contratos, locaciones de servicio, reclamos, procedimientos,
+                recursos y procesos administrativos, sumarios, entre otros
+                asuntos.</span><br/>
+                <span class="texto" *ngIf="mostrarAdmin">En materia previsional realizamos todo tipo de gestiones
+                ante ANSES, ayudando a nuestros clientes a tramitar sus
+                jubilaciones, pensiones, retiros por invalidez y reconocimiento
+                de servicios.
+                Además, analizamos su situación previsional y la cantidad de
+                años de aportes para luego evaluar la forma de completar
+                los años faltantes.</span>
+                <button (click)="mostrarAdmin= !mostrarAdmin" *ngIf="mostrarAdmin == false">Ver más</button>
+                <button (click)="mostrarAdmin = !mostrarAdmin" *ngIf="mostrarAdmin == true">Ver menos</button>
+            </div>
+            <div class="hijo">
+                <img src="../../../assets/derecho-administrativo.jpg" alt="Derecho Administrativo y Previsional" title="Derecho Administrativo y Previsional">
+            </div>
+        </div>
+
+
+        <div class="contenedor reverse">
+            <div class="hijo">
+                <img src="../../../assets/derecho-comercial.jpg" alt="Derecho Comercial, de los Consumidores, Concursos y Quiebras" title="Derecho Comercial, de los Consumidores, Concursos y Quiebras">
+            </div>
+            <div class="hijo">
+                <h2>Derecho Comercial, de los Consumidores, Concursos y Quiebras</h2>
+                <span class="texto">En materia comercial asesoramos a empresas, empresarios y emprendedores,
+                     constituimos sociedades, solucionamos conflictos societarios, concurrimos a asambleas,
+                      entre otros asuntos societarios.</span><br/>
+                <span class="texto" *ngIf="mostrarComercial">Con respecto a los consumidores defendemos sus derechos frente a los incumplimientos de los proveedores de bienes y/o servicios, por ejemplo: comercios electrónicos, agencias de viaje, concesionarias de automotores, negocios, fábricas, etc.<br/>
+                    También tramitamos la solución económica de aquellas personas que no puedan cobrar sus créditos o tengan desequilibrios financieros tratando de purificar sus deudas.</span>
+                <button (click)="mostrarComercial = !mostrarComercial" *ngIf="mostrarComercial == false">Ver más</button>
+                <button (click)="mostrarComercial = !mostrarComercial" *ngIf="mostrarComercial == true">Ver menos</button>
+            </div>
+        </div>
+    </div>
+</div>

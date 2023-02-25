@@ -1,0 +1,113 @@
+<div class="padrePadre">
+    <div class="animated fadeInUp">
+        <div>
+            <h2>CONTÁCTENOS</h2>
+        </div>
+        <!-- DIRECCIONES -->
+        <div class="padre reverse ">
+            <div class="datos ">
+
+                <div class="direcciones">
+                    <p>Patricios 420. Luján de Cuyo- Mendoza</p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3344.756215638038!2d-68.88439638556312!3d-33.036552580894444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e753f7fb26745%3A0x9b7dd9fb6a6e2ec7!2sPatricios%20420%2C%20M5507%20Luj%C3%A1n%20de%20Cuyo%2C%20Mendoza!5e0!3m2!1ses-419!2sar!4v1589244201864!5m2!1ses-419!2sar"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+                <br/>
+                <div class="direcciones">
+                    <p>9 de Julio - Piso 1, Oficina 3 Ciudad - Mendoza</p>
+
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3350.262465646021!2d-68.84323438546222!3d-32.891228176413776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x967e091a1c6aae0b%3A0x55bf2c57e9ec940a!2sAgneni%20Rodolfo%20Abogado!5e0!3m2!1ses!2sar!4v1589821092895!5m2!1ses!2sar"
+                        width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+                </div>
+            </div>
+
+            <!-- FORMULARIO -->
+            <div class="formulario ">
+                <span>Complete el formulario y acceda a una consulta online</span>
+                <form autocomplete="off" [formGroup]='forma' (ngSubmit)='guardar()' #formulario='ngForm'>
+
+
+                    <!-- NOMBRE -->
+                    <div class="form-group">
+                        <label class="col-2 col-form-label"></label>
+                        <div class="col-12">
+
+                            <input class="form-control" type="text" placeholder="Nombre y Apellido" formControlName="nombre" [class.is-invalid]=" nombreNoValido">
+                            <small *ngIf="nombreNoValido" class="text-danger">Agregue un nombre</small>
+
+                        </div>
+                    </div>
+                    <!-- CORREO -->
+
+                    <div class="form-group">
+                        <label class="col-2 col-form-label"></label>
+                        <div class="col-12">
+
+                            <input class="form-control" type="email" placeholder="Correo electrónico" formControlName="correo" [class.is-invalid]=" correoNoValido">
+                            <small *ngIf="correoNoValido" class="text-danger">Agregue un correo válido</small>
+                        </div>
+                    </div>
+                    <!-- TELEFONO -->
+
+                    <div class="form-group">
+                        <label class="col-2 col-form-label"></label>
+                        <div class="col-12">
+
+                            <input class="form-control" type="number" placeholder="Numero de Celular" formControlName="telefono" [class.is-invalid]=" telefonoNoValido">
+                            <small *ngIf="telefonoNoValido" class="text-danger">Agregue un teléfono</small>
+                        </div>
+                    </div>
+
+                    <!-- CONSULTA -->
+                    <div class="form-group">
+                        <label class="col-2 col-form-label"></label>
+                        <div class="col-12">
+                            <div class="form-group">
+
+                                <select class="form-control" id="exampleFormControlSelect1" formControlName="motivoConsulta" [class.is-invalid]=" motivoConsultaNoValido">
+                              <option selected="selected">Motivo de consulta</option>
+                              <option>Litigios y Resolución alternativa de conflictos</option>
+                              <option>Derecho Civil, Sucesorio y de las Familias</option>
+                              <option>Derecho del Trabajo y de la Seguridad Social</option>
+                              <option>Derecho administrativo y Previsional</option>
+                              <option>Derecho Comercial, de los Consumidores, Concursos y Quiebras</option>
+                              <option>Sector Inmobiliario</option>
+                              <small *ngIf="motivoConsultaNoValido" class="text-danger">Agregue un motivo de consulta</small>
+                            </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- MENSAJE -->
+                    <div class="form-group">
+                        <label class="col-2 col-form-label"></label>
+                        <div class="col-12">
+
+                            <textarea class="form-control" type="text" placeholder="Mensaje" formControlName="mensaje" [class.is-invalid]=" mensajeNoValido" rows="s"> </textarea>
+                            <small *ngIf="mensajeNoValido" class="text-danger">Agregue un mensaje</small>
+                        </div>
+                    </div>
+
+
+                    <!-- BOTON ENVIAR -->
+                    <div class="form-group">
+                        <label class="col-2 col-form-label"></label>
+                        <div class="input-group col-md-12">
+                            <button type="submit" class="btn btn-secondary btn-block" [disabled]="!forma.valid">Enviar consulta</button>
+                        </div>
+                    </div>
+
+                </form>
+                <div>
+
+                    <a title="agnenicarrazcoabogados@gmail.com" class="mail" href="mailto:agnenicarrazcoabogados@gmail.com">agnenicarrazcoabogados@gmail.com</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+<!-- fin padrePadre para agregar fondo negro-->

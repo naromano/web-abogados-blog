@@ -1,0 +1,28 @@
+<div class="divPrincipal">
+    <div class="animated fadeInUp">
+        <h3>SOBRE NOSOTROS</h3>
+        <div class="sobreNosotrosContainer ">
+            <p>Somos un estudio jurídico integrado por profesionales en ciencias jurídicas especializados en diversas áreas del derecho.</p>
+            <p>Nuestro servicio consiste en ofrecer un asesoramiento personalizado orientado a la satisfacción de las necesidades de cada uno de nuestros clientes.</p>
+            <p>Tenemos dos sedes, una ubicada en la Ciudad de Mendoza y otra en la Ciudad de Lujan de Cuyo.</p>
+            <p>Ademas contamos con un sector especializado en materia inmobiliaria.</p>
+        </div>
+
+
+        <h2> NUESTRO EQUIPO</h2>
+        <div class="divLawyers row ">
+            <div class="abogadoCelda col-md-6" *ngFor="let lawyer of lawyers ">
+                <div class="position ">
+                    <span class="name">{{ lawyer.name }}</span>
+                </div>
+                <div class="divHijo">
+                    <span class="description"> {{lawyer.description}}</span>
+                    <br>
+                    <a title="mail" class="mail" href="mailto:{{ lawyer.email }}">{{ lawyer.email }}</a>
+                    <br>
+                    <span class="cell-number "> {{ lawyer.cellNumber }}</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

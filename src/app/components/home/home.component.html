@@ -1,0 +1,142 @@
+<div class="padre">
+    <!-- nombres y linea -->
+    <div class="home animated fadeInUp">
+        <h3>AGNENI & CARRAZCO</h3>
+
+        <h2>ABOGADOS</h2>
+    </div>
+
+    <!-- texto covid -->
+    <div class="covid  animated fadeInUp">
+        En virtud de las medidas sanitarias decretadas por el Gobierno Nacional y Provincial asesoramos<br/> a nuestros clientes de manera virtual y presencial con los debidos protocolos.
+
+    </div>
+    <div>
+        <a title="Contacto" class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" [routerLink]="['/contacto']">Contacto</a>
+    </div>
+    <div class="divPrincipal">
+
+        <div class="hijo">
+            <h4>QUIENES SOMOS</h4>
+            <span class="texto">Somos un estudio jurídico de la provincia de Mendoza, integrado por profesionales especializados en distintas áreas del derecho, nos caracterizamos por brindar un enfoque integrador, conjugando creatividad, análisis exhaustivo e inteligencia.
+                    Para llevar adelante nuestras actividades el Estudio cuenta con cinco abogados. También forman parte de nuestro equipo una escribana y un profesional especializado en el área inmobiliaria.
+                    Podes encontrarnos en nuestras sedes ubicadas en la Ciudad de Mendoza y en la Ciudad de Luján de Cuyo.
+    </span><br/><br>
+
+        </div>
+
+        <div>
+            <h4>PROFESIONALES</h4>
+            <span class="texto">Los profesionales que integran nuestro equipo de trabajo son:</span><br>
+            <span class="texto">Rodolfo Agneni, abogado.</span><br/>
+            <span class="texto">Monica Carrazco, abogada y mediadora.</span><br/>
+            <span class="texto">Miriam Gallardo, abogada.</span><br/>
+            <span class="texto">Alejandra Maradona, abogada.</span><br/>
+            <span class="texto">Juan Cruz Vercelli, abogado.</span><br/>
+            <span class="texto">Leonardo Ponce, corredor público inmobiliario y martillero.</span><br/>
+
+            <br/>
+            <h4>NUESTRO SERVICIO</h4>
+            <span class="texto">Ofrecemos asesoramiento personalizado, orientado a satisfacer las necesidades de cada cliente en forma ágil y eficiente. 
+        Brindamos asistencia jurídica en litigios civiles, comerciales, laborales y administrativos y complementariamente ofrecemos los servicios de medicación, conciliación y negociación para arribar a una solución alternativa de los conflictos.
+        
+        </span><br/><br>
+
+            <h4>AREAS DE PRÁCTICA:</h4>
+
+            <span class="practicas">Derecho Civil:<button (click)="mostrarCivil = !mostrarCivil" *ngIf="mostrarCivil == false">Ver más</button></span><br/>
+            <div *ngIf="mostrarCivil" class="areas">
+                <span class="texto">- Contratos.</span><br/>
+                <span class="texto">- Incumplimientos contractuales.</span><br/>
+                <span class="texto">- Fideicomisos</span><br/>
+                <span class="texto">- Daños y Perjuicios.</span><br/>
+                <span class="texto">- Desalojos.</span><br/>
+                <span class="texto">- Sucesiones.</span><br/>
+                <span class="texto">- Cesiones de Herencia.</span><br/>
+                <span class="texto">- Testamentos.</span><br>
+                <button (click)="mostrarCivil= !mostrarCivil" *ngIf="mostrarCivil == true">Ver menos</button>
+            </div>
+            <br>
+
+
+            <span class="practicas">Derecho del Trabajo: <button (click)="mostrarTrabajo = !mostrarTrabajo" *ngIf="mostrarTrabajo == false">Ver más</button></span><br/>
+
+            <div *ngIf="mostrarTrabajo" class="areas">
+                <span class="texto">- Empleo no registrado o deficientemente registrado.</span><br/>
+                <span class="texto">- Falta de pago de salarios.</span><br/>
+                <span class="texto">- Modificación de las condiciones laborales.</span><br/>
+                <span class="texto">- Acoso laboral.</span><br/>
+                <span class="texto">- Conciliaciones Laborales.</span><br/>
+                <span class="texto">- Despidos.</span><br/>
+                <span class="texto">- Accidentes de Trabajo.</span><br/>
+                <span class="texto">- Enfermedades Profesionales.</span><br/>
+                <span class="texto">- Servicio Doméstico.</span><br/>
+                <span class="texto"></span><br>
+
+
+                <button (click)="mostrarTrabajo= !mostrarTrabajo" *ngIf="mostrarTrabajo == true">Ver menos</button>
+            </div>
+            <br>
+
+            <span class="practicas">Derecho de las Familias: <button (click)="mostrarFamilia = !mostrarFamilia" *ngIf="mostrarFamilia == false">Ver más</button></span><br/>
+            <div *ngIf="mostrarFamilia" class="areas">
+                <span class="texto">- Mediación.</span><br/>
+                <span class="texto">- Regímenes de comunicación y cuidado personal.</span><br/>
+                <span class="texto">- Alimentos.</span><br/>
+                <span class="texto">- Divorcios.</span><br/>
+                <span class="texto">- Responsabilidad parental.</span><br/>
+                <span class="texto">- División de bienes.</span><br/>
+                <span class="texto">- Medidas de protección.</span><br/>
+                <span class="texto">- Designación de apoyos, tutores y curadores.</span><br/>
+                <span class="texto"></span><br>
+
+                <button (click)="mostrarFamilia= !mostrarFamilia" *ngIf="mostrarFamilia == true">Ver menos</button>
+            </div>
+            <br>
+
+            <span class="practicas">Derecho Administrativo:<button (click)="mostrarAdmin = !mostrarAdmin" *ngIf="mostrarAdmin == false">Ver más</button></span><br/>
+
+            <div *ngIf="mostrarAdmin" class="areas">
+                <span class="texto">- Procedimientos administrativos.</span><br/>
+                <span class="texto">- Empleo público.</span><br/>
+                <span class="texto">- Licitaciones.</span><br/>
+                <span class="texto">- Locaciones de Servicio.</span><br/>
+                <span class="texto">- Sumarios.</span><br/>
+                <span class="texto"></span><br>
+
+                <button (click)="mostrarAdmin= !mostrarAdmin" *ngIf="mostrarAdmin == true">Ver menos</button>
+            </div>
+            <br>
+
+            <span class="practicas">Derecho Comercial:<button (click)="mostrarComercial = !mostrarComercial" *ngIf="mostrarComercial == false">Ver más</button>
+            </span><br/>
+
+            <div *ngIf="mostrarComercial" class="areas">
+                <span class="texto">- Constitución de sociedades.</span><br/>
+                <span class="texto">- Ejecuciones cambiarias.</span><br/>
+                <span class="texto">- Licitaciones.</span><br/>
+                <span class="texto">- Concursos y Quiebras.</span><br/>
+                <span class="texto">- Consumidores.</span><br/>
+                <span class="texto"></span><br>
+
+                <button (click)="mostrarComercial= !mostrarComercial" *ngIf="mostrarComercial == true">Ver menos</button>
+            </div>
+            <br>
+
+            <span class="practicas">Derecho previsional:<button (click)="mostrarLitigio = !mostrarLitigio" *ngIf="mostrarLitigio == false">Ver más</button>
+            </span><br/>
+
+            <div *ngIf="mostrarLitigio" class="areas">
+                <span class="texto">- Jubilaciones.</span><br/>
+                <span class="texto">- Pensiones.</span><br/>
+                <span class="texto">- Retiros por invalidez.</span><br/>
+                <span class="texto">- Reconocimiento de servicios.</span><br/>
+                <span class="texto"></span><br/>
+                <button (click)="mostrarLitigio= !mostrarLitigio" *ngIf="mostrarLitigio == true">Ver menos</button>
+            </div>
+
+            <br>
+        </div>
+
+    </div>
+</div>

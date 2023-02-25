@@ -1,0 +1,93 @@
+.padre {
+    margin: 120px auto 30px auto;
+    background-color: rgb(39, 39, 39);
+    max-width: 1200px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+}
+
+.contenedor {
+    display: flex;
+    margin-top: 30px;
+    width: fit-content;
+}
+
+.hijo {
+    width: 50%;
+    padding-left: 25px;
+    padding-right: 25px;
+    text-align: center;
+}
+
+h4 {
+    color: rgba(235, 237, 236);
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    border-bottom: 1px solid rgb(221, 223, 230);
+    display: inline-block;
+    text-align: center;
+}
+
+.area {
+    text-align: center;
+}
+
+img {
+    width: 100%;
+    padding: 10px;
+}
+
+h2 {
+    padding: 10px;
+    text-align: center;
+    color: rgba(235, 237, 236);
+    font-size: 28px;
+    font-family: 'Lora', serif;
+}
+
+.texto {
+    font-size: 18px;
+    padding: 20px;
+    color: rgba(235, 237, 236);
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+}
+
+button {
+    background-color: rgb(39, 39, 39);
+    border: none;
+    color: rgb(102, 107, 107);
+}
+
+
+/* Responsive */
+
+@media (max-width:850px) {
+    .reverse {
+        flex-direction: column-reverse !important;
+    }
+    .contenedor {
+        flex-direction: column;
+    }
+    .hijo {
+        width: 100%;
+    }
+    h4 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 20px;
+        padding: 0;
+    }
+    .texto {
+        font-size: 15px;
+    }
+    img {
+        padding: 3px;
+    }
+}

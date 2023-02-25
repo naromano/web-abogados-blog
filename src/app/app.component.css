@@ -1,0 +1,8 @@
+.fondo {
+    background-image: url(../assets/fondo.jpg);
+    /* background-position: center center; */
+    /* background-size: cover; */
+    flex: 1 0 auto;
+    /* width: 100%; */
+    background-repeat: repeat;
+}
