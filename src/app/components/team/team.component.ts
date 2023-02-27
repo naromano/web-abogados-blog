@@ -21,7 +21,6 @@ lawyers: Lawyer[] = [];
   ngOnInit() {
 
 this.lawyers = this._teamService.getLawyer();
-console.log(this.lawyers);
 
 this.router.events.subscribe((evt) => {
   if (!(evt instanceof NavigationEnd)){

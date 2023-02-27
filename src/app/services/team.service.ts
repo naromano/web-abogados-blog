@@ -46,7 +46,6 @@ private lawyers: Lawyer[] = [
   ];
 
     constructor() {
-        console.log('servicio listo para usarse');
     }
 
 getLawyer(){
