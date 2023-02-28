@@ -1,0 +1,26 @@
+<div class="padre">
+
+<h4>CREAR NUEVA PUBLICACION</h4>
+
+<form class="form" (ngSubmit)="mostrar()" [formGroup]="myForm">
+    <ckeditor formControlName="html"></ckeditor>
+    <button type="submit" mat-raised-button color="primary">Crear</button>
+    
+    </form>
+    <h4>{{name}}</h4>
+    
+    <div class="inner" [innerHTML]="renderizado"></div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>

@@ -5,6 +5,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { TeamComponent } from './components/team/team.component';
 import { RealEstateComponent } from './components/real-estate/real-estate.component';
 import { PracticalAreasComponent } from './components/practical-areas/practical-areas.component';
+import { CreatePostComponent } from './components/blog/create-post/create-post.component';
+import { ListPostComponent } from './components/blog/list-post/list-post.component';
 
 const routes: Routes = [
 
@@ -14,6 +16,8 @@ const routes: Routes = [
 	{ path: 'sectorinmobiliario', component: RealEstateComponent },
 	{ path: 'contacto', component: ContactComponent },
 	{ path: 'areaspracticas', component: PracticalAreasComponent },
+	{ path: 'nuevo', component: CreatePostComponent },
+	{ path: 'publicaciones', component: ListPostComponent },
 	{ path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 
