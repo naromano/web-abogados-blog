@@ -3,7 +3,17 @@
 <h4>CREAR NUEVA PUBLICACION</h4>
 
 <form class="form" (ngSubmit)="mostrar()" [formGroup]="myForm">
-    <ckeditor formControlName="html"></ckeditor>
+
+        <h2>SUBIR IMAGEN</h2>
+
+        <input class="form-control" type="file" formControlName="img">
+
+        <h2>TITULO</h2>
+
+        <input class="form-control" type="text" placeholder="Titulo" formControlName="title">
+
+        <h2>TEXTO</h2>
+    <ckeditor class="editor" formControlName="html" #ckeditor></ckeditor>
     <button type="submit" mat-raised-button color="primary">Crear</button>
     
     </form>
