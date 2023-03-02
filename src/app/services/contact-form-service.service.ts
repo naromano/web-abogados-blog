@@ -15,7 +15,7 @@ export class ContactFormService {
   sendForm(form: any): Observable<object> {
     console.log(form);
 
-    return this.httpClient.post('../../sendEmail.php', form);
+    return this.httpClient.post('https://us-central1-blog-agneni-carrazco.cloudfunctions.net/app/envio', form);
   }
 }
 
