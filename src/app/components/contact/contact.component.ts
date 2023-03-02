@@ -63,6 +63,7 @@ export class ContactComponent implements OnInit {
 
   guardar(){
     const formValues = this.forma.value;
+    console.log(formValues)
     if (this.forma.valid){
       this.contactService.sendForm(formValues).subscribe();
       this.clearForm();
