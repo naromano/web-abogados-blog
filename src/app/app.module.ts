@@ -1,11 +1,14 @@
+//modulos
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ng2-ckeditor';
+import { AppRouterModule } from './routes.module';
+import { HttpClientModule } from '@angular/common/http';
 
 
-
+//componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/shared/navbar/navbar.component';
@@ -17,10 +20,11 @@ import { TeamService } from '../app/services/team.service';
 import { RealEstateComponent } from './components/real-estate/real-estate.component';
 import { CreatePostComponent } from './components/blog/create-post/create-post.component';
 import { ListPostComponent } from './components/blog/list-post/list-post.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 
-import { AppRouterModule } from './routes.module';
-import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -33,7 +37,9 @@ import { HttpClientModule } from '@angular/common/http';
     TeamComponent,
     RealEstateComponent,
     CreatePostComponent,
-    ListPostComponent
+    ListPostComponent,
+    LoginComponent,
+    RegisterComponent
 
 
   ],

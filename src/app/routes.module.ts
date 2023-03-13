@@ -7,6 +7,8 @@ import { RealEstateComponent } from './components/real-estate/real-estate.compon
 import { PracticalAreasComponent } from './components/practical-areas/practical-areas.component';
 import { CreatePostComponent } from './components/blog/create-post/create-post.component';
 import { ListPostComponent } from './components/blog/list-post/list-post.component';
+import { LoginComponent } from './components/auth/login/login.component';
+import { RegisterComponent } from './components/auth/register/register.component';
 
 const routes: Routes = [
 
@@ -18,6 +20,8 @@ const routes: Routes = [
 	{ path: 'areaspracticas', component: PracticalAreasComponent },
 	{ path: 'nuevo', component: CreatePostComponent },
 	{ path: 'publicaciones', component: ListPostComponent },
+	{ path: 'login', component: LoginComponent },
+	{ path: 'register', component: RegisterComponent },
 	{ path: '**', pathMatch: 'full', redirectTo: '' }
 ];
 

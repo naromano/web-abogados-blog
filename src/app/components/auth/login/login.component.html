@@ -1,0 +1,16 @@
+<div class="padre"></div>
+<h1>ESTE ES EL LOGIN</h1>
+
+<form class="form" (ngSubmit)="singIn()" [formGroup]="myForm">
+
+    <h2>EMAIL</h2>
+
+    <input class="form-control" type="email" formControlName="email">
+
+    <h2>PASSWORD</h2>
+
+    <input class="form-control" type="password" placeholder="password" formControlName="password">
+
+<button type="submit" mat-raised-button color="primary">Crear</button>
+
+</form>
