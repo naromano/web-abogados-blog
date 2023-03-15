@@ -19,7 +19,7 @@ const routes: Routes = [
 	{ path: 'contacto', component: ContactComponent },
 	{ path: 'areaspracticas', component: PracticalAreasComponent },
 	{ path: 'nuevo', component: CreatePostComponent },
-	{ path: 'publicaciones', component: ListPostComponent },
+	{ path: 'listapublicaciones', component: ListPostComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: '**', pathMatch: 'full', redirectTo: '' }

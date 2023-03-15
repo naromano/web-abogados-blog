@@ -1,7 +1,10 @@
 import { Component } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
+import { catchError, throwError } from 'rxjs';
 import { singInModel } from 'src/app/models/auth';
 import { AuthService } from 'src/app/services/auth.service';
+import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -10,7 +13,7 @@ import { AuthService } from 'src/app/services/auth.service';
 })
 export class LoginComponent {
 
-  constructor (private fb: UntypedFormBuilder, private authSevice: AuthService) {
+  constructor (private fb: UntypedFormBuilder, private authSevice: AuthService, private router: Router) {
     
   }
 
@@ -24,12 +27,20 @@ export class LoginComponent {
       email: this.myForm.get("email")?.value,
       password: this.myForm.get("password")?.value
     }
+    Swal.showLoading();
 
-    console.log(login)
-
-    this.authSevice.singIn(login).subscribe(resp =>{
-      console.log(resp)
-    })
+    this.authSevice.singIn(login)
+    .subscribe(resp => {
+      Swal.close();
+      const token = resp.token
+      if(token !== null){
+        window.localStorage.setItem('auth-token', token!)
+        this.router.navigateByUrl('/listapublicaciones');
+      }
+    },
+    error => {
+      Swal.fire(error.error.error)
+    });
 
   }
 }
