@@ -9,6 +9,8 @@ import { CreatePostComponent } from './components/blog/create-post/create-post.c
 import { ListPostComponent } from './components/blog/list-post/list-post.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { PostsComponent } from './components/blog/posts/posts.component';
+import { PostComponent } from './components/blog/post/post.component';
 
 const routes: Routes = [
 
@@ -20,6 +22,8 @@ const routes: Routes = [
 	{ path: 'areaspracticas', component: PracticalAreasComponent },
 	{ path: 'nuevo', component: CreatePostComponent },
 	{ path: 'listapublicaciones', component: ListPostComponent },
+	{ path: 'publicaciones', component: PostsComponent },
+	{ path: 'publicacion/:id', component: PostComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: '**', pathMatch: 'full', redirectTo: '' }

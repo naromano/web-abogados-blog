@@ -1,0 +1,29 @@
+.padre{
+    margin-top: 10%;
+    text-align: center;
+}
+
+h1{
+    color: antiquewhite;
+}
+
+.cards{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5%;
+    background-color: aqua;
+    justify-content: center;
+    
+
+}
+
+.card{
+    margin: 3%;
+    width: 25%;
+    color: aliceblue;
+    background-color: #212529;
+}
+
+.card-img-top{
+}

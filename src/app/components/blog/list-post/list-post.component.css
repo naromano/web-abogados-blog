@@ -1,0 +1,27 @@
+.padre{
+    margin-top: 10%;
+}
+
+.titulos {
+
+    color: antiquewhite;
+}
+
+.table{
+    color: antiquewhite;
+    margin-top: 10%;
+}
+
+.editarButtom{
+    max-width: 60px;
+    background-color: blue;
+    text-align: center;
+}
+
+.eliminarButtom{
+
+    max-width: 80px;
+    background-color: red;
+    text-align: center;
+
+}

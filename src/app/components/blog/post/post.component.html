@@ -1,0 +1,15 @@
+<div class="padre">
+<h1>{{post.title}}</h1>
+    <div class="img-user-date">
+        <div class="image">
+            <img src="{{post.image}}" alt="">
+        </div>
+        <div class="user-date">
+            <span>{{post.user}}</span>   
+            <span>{{post.date}}</span> 
+        </div>
+        
+    </div>
+  
+    <div class="inner" [innerHTML]="renderizado"></div>   
+</div>

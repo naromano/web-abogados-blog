@@ -8,6 +8,8 @@ import { AppRouterModule } from './routes.module';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
+
 //componentes
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -22,7 +24,14 @@ import { CreatePostComponent } from './components/blog/create-post/create-post.c
 import { ListPostComponent } from './components/blog/list-post/list-post.component';
 import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
+import { PostComponent } from './components/blog/post/post.component';
+import { PostsComponent } from './components/blog/posts/posts.component';
 
+
+//Firebase Storage
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { environment } from '../environments/environment';
+import { provideStorage,getStorage } from '@angular/fire/storage';
 
 
 
@@ -39,7 +48,9 @@ import { RegisterComponent } from './components/auth/register/register.component
     CreatePostComponent,
     ListPostComponent,
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    PostComponent,
+    PostsComponent
 
 
   ],
@@ -49,7 +60,9 @@ import { RegisterComponent } from './components/auth/register/register.component
     ReactiveFormsModule,
     FormsModule,
     AppRouterModule,
-    HttpClientModule
+    HttpClientModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideStorage(() => getStorage())
   ],
   providers: [
     TeamService

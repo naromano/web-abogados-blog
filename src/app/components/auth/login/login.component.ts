@@ -34,7 +34,7 @@ export class LoginComponent {
       Swal.close();
       const token = resp.token
       if(token !== null){
-        window.localStorage.setItem('auth-token', token!)
+        window.localStorage.setItem('auth_token', token!)
         this.router.navigateByUrl('/listapublicaciones');
       }
     },

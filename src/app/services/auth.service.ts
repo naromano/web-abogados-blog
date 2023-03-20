@@ -8,7 +8,6 @@ import {  singInModel, singUpModel } from '../models/auth';
 export class AuthService {
    url = "https://us-central1-blog-agneni-carrazco.cloudfunctions.net/app/";
    url1 = "http://localhost:3000/api/"
-
   constructor(private http: HttpClient) {
     
    }
