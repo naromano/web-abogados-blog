@@ -1,15 +1,21 @@
 .padre{
-    margin-top: 10%;
+    margin-top: 100px;
+    width: 100%;
+    background-color: rgb(39, 39, 39);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-top: 20px;
 }
 
 .titulos {
 
-    color: antiquewhite;
+    color: rgb(214, 214, 214);
 }
 
 .table{
-    color: antiquewhite;
-    margin-top: 10%;
+    color: rgb(214, 214, 214);
+    margin-top: 25px;
 }
 
 .editarButtom{
@@ -24,4 +30,37 @@
     background-color: red;
     text-align: center;
 
+}
+
+.panelButtons{
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+h1{
+    color: rgba(235, 237, 236);
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    border-bottom: 1px solid rgb(221, 223, 230);
+    display: inline-block;
+    text-align: center;
+    margin: auto;
+}
+
+@media (max-width:670px) {
+    .title{
+        font-size: 11px;
+    }
+    .user{
+        font-size: 11px;
+    }
+
+    button{
+        font-size: 12px;
+    }
 }

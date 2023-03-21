@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { BlogService } from 'src/app/services/blog.service';
 import Swal from 'sweetalert2';
 
@@ -10,18 +11,19 @@ import Swal from 'sweetalert2';
 export class ListPostComponent implements OnInit {
 
   allposts: any = []
+  authToken = localStorage.getItem("auth_token")
 
-  constructor(private blogService: BlogService){}
+  constructor(private blogService: BlogService, private router: Router){}
   ngOnInit(): void {
     this.allPost()
+    this.tokenValid()
   }
-
-  ir(){
-    console.log("kapolas sos crack")
-  }
-
   
-
+  tokenValid(){
+    if(this.authToken === null){
+      this.router.navigateByUrl(`/`);
+    }
+  }
 
   allPost(){
     Swal.showLoading()
@@ -29,14 +31,18 @@ export class ListPostComponent implements OnInit {
     this.blogService.allPosts().subscribe(resp => {
       this.allposts = resp
       Swal.close()
-      console.log(resp)
     })
   }
 
   delete(id: string){
     Swal.showLoading()
     this.blogService.deletePost(id)?.subscribe()
-    Swal.close()
+    setTimeout(() =>{
+      window.location.reload()
+      Swal.close()
+    },1000)
+    
+
 
   }
 

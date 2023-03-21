@@ -17,7 +17,6 @@ export class PostComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute, private blogService: BlogService, private sanitizer: DomSanitizer){
     this.activatedRoute.params.subscribe(params => {
       this.id = params['id']
-      console.log(params['id'])
       });
     }
   ngOnInit(): void {
@@ -28,15 +27,14 @@ export class PostComponent implements OnInit {
 
   getPost(){
     this.blogService.onePost(this.id).subscribe(resp => {
-      console.log(resp)
       this.renderizado = this.sanitizer.bypassSecurityTrustHtml(resp.text);
-    console.log(this.renderizado)
       this.post = {
         title: resp.title,
         image: resp.image,
         text: resp.text,
         user: resp.user,
-        date: resp.date
+        date: resp.date,
+        id: resp.id
 
 
       };

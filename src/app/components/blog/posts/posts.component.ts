@@ -24,7 +24,6 @@ export class PostsComponent implements OnInit {
     this.blogService.allPosts().subscribe(resp => {
       this.allposts = resp
       Swal.close()
-      console.log(resp)
     })
   }
 

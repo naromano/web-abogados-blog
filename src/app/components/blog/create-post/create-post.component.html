@@ -1,35 +1,29 @@
 <div class="padre">
-
 <h4>CREAR NUEVA PUBLICACION</h4>
-
-
-
 <form class="form" (ngSubmit)="createPost()" [formGroup]="myForm">
-
-        <h2>Usuario Creador</h2>
-
-        <select name="select" formControlName="user">
+  <div class="user-image">
+    <div class="user">
+        <h2>Usuario Creador:</h2>
+        <select class="selectInput" name="select" formControlName="user">
             <option></option>
             <option value="Nicolas Romano">Nicolas Romano</option>
             <option value="Eduardo Romano">Eduardo Romano</option>
             <option value="Vercelli Juan Cruz">Vercelli Juan Cruz</option>
           </select>
-
+    </div>
+    <div class="image">
         <h2>SUBIR IMAGEN</h2>
-
-        <input class="form-control" type="file" (change)="uploadImage($event)" formControlName="image">
-
+        <input class="imageInput form-control" type="file" (change)="uploadImage($event)" formControlName="image">
+    </div>
+  </div>
+  <div class="title-text">
         <h2>TITULO</h2>
-
         <input class="form-control" type="text" placeholder="Titulo" formControlName="title">
-
+    <div class="text">
         <h2>TEXTO</h2>
     <ckeditor class="editor" formControlName="text" #ckeditor></ckeditor>
-    <button type="submit" mat-raised-button color="primary">Crear</button>
-    
+  </div>
+  </div>
+    <button type="submit" mat-raised-button color="primary">Crear Publicacion</button>
     </form>
-    <h4>{{name}}</h4>
-    
-    <div class="inner" [innerHTML]="renderizado"></div>
-
 </div>

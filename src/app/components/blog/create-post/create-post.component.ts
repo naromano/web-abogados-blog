@@ -1,26 +1,30 @@
-import { Component, NgZone, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
 import { DomSanitizer, SafeHtml } from '@angular/platform-browser';
-import { CKEditorComponent } from 'ng2-ckeditor';
 import { PostModel } from 'src/app/models/post';
 import { BlogService } from 'src/app/services/blog.service';
 import { Storage, ref, getDownloadURL } from '@angular/fire/storage'
 import { uploadBytes } from '@firebase/storage';
 import Swal from 'sweetalert2';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-create-post',
   templateUrl: './create-post.component.html',
   styleUrls: ['./create-post.component.css']
 })
-export class CreatePostComponent{
+export class CreatePostComponent implements OnInit{
+  
+  authToken = localStorage.getItem("auth_token")
 
-  constructor (private fb: UntypedFormBuilder, private sanitizer: DomSanitizer, private blogService: BlogService, private storage: Storage) {
+  constructor (private fb: UntypedFormBuilder, private sanitizer: DomSanitizer, private blogService: BlogService, private storage: Storage, private router: Router) {
     
   }
-  name: string = "holaaa"
+  ngOnInit(): void {
+
+    this.tokenValid() 
+  }
   renderizado: SafeHtml = ''
-  htmlCode = '<h1>Hello World!</h1>';
   imagePost = '';
 
   myForm: UntypedFormGroup = this.fb.group({
@@ -30,18 +34,30 @@ export class CreatePostComponent{
     user: ['', [Validators.required]]
   })
 
+  tokenValid(){
+    if(this.authToken === null){
+      this.router.navigateByUrl(`/`);
+    }
+  }
 
   createPost(){
+    Swal.showLoading();
     const post: PostModel = {
       title: this.myForm.get("title")?.value,
       image: this.imagePost,
       text: this.myForm.get("text")?.value,
       user: this.myForm.get("user")?.value,
-      date: ""
+      date: "",
+      id: ""
     }
 
     this.blogService.createPost(post)?.subscribe(resp =>{
-      console.log(resp)
+      Swal.fire(
+        'Publicacion Creada',
+        'success'
+      )
+      const id = resp.id
+      this.router.navigateByUrl(`/publicacion/${id}`);
     })
 
   }
@@ -59,18 +75,6 @@ export class CreatePostComponent{
 
     } )
     .catch(error => console.log(error))
-
-    
-
-  }
-
-  mostrar(){
-    this.name = this.myForm.get("text")?.value
-    console.log(this.myForm.get("title")?.value)
-    
-
-    this.renderizado = this.sanitizer.bypassSecurityTrustHtml(this.name);
-    console.log(this.renderizado)
   }
 
 }
