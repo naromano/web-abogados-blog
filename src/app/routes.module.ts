@@ -11,6 +11,7 @@ import { LoginComponent } from './components/auth/login/login.component';
 import { RegisterComponent } from './components/auth/register/register.component';
 import { PostsComponent } from './components/blog/posts/posts.component';
 import { PostComponent } from './components/blog/post/post.component';
+import { EditPostComponent } from './components/blog/edit-post/edit-post.component';
 
 const routes: Routes = [
 
@@ -24,6 +25,7 @@ const routes: Routes = [
 	{ path: 'publicaciones', component: PostsComponent },
 	{ path: 'publicacion/nuevo', component: CreatePostComponent },
 	{ path: 'publicacion/:id', component: PostComponent },
+	{ path: 'publicacion/editar/:id', component: EditPostComponent },
 	{ path: 'login', component: LoginComponent },
 	{ path: 'register', component: RegisterComponent },
 	{ path: '**', pathMatch: 'full', redirectTo: '' }

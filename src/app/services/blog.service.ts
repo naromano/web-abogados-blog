@@ -35,7 +35,12 @@ export class BlogService {
 
   }
 
-  updatePost(){
+  updatePost(id: string, post: PostModel){
+    const token = localStorage.getItem('auth_token')
+    if(token){
+    return this.http.put<PostModel>(`${this.url}api/posts/post/${id}`, post ,{ headers: {auth_token: token} } )
+    }
+    return null
 
   }
 

@@ -35,8 +35,6 @@ export class PostComponent implements OnInit {
         user: resp.user,
         date: resp.date,
         id: resp.id
-
-
       };
     });
 

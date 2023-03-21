@@ -48,6 +48,7 @@ export class ListPostComponent implements OnInit {
   }
 
   editar(id: string){
+    this.router.navigateByUrl(`/publicacion/editar/${id}`)
 
   }
 

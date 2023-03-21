@@ -1,0 +1,103 @@
+.padre {
+    margin: 120px auto 30px auto;
+    background-color: rgb(39, 39, 39);
+    width: 80%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+}
+
+h4 {
+    color: rgba(235, 237, 236);
+    font-size: 35px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    border-bottom: 1px solid rgb(221, 223, 230);
+    display: inline-block;
+}
+
+.editor{
+    width: 10%;
+}
+
+h2 {
+    color: rgba(235, 237, 236);
+    font-size: 25px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    width: fit-content;
+    border-bottom: 1px solid rgb(221, 223, 230);
+    display: inline-block;
+    text-align: center;
+}
+.inner{
+    background-color: azure;
+}
+
+.user-image{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    margin-top: 2%;
+}
+.user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    align-items: center;
+    width: 30%;
+}
+
+.imageInput{
+    width: 100%;
+}
+
+.selectInput{
+    width: 100%;
+}
+
+.text{
+    margin-top: 20px;
+}
+.title-text{
+    margin-top: 40px;
+}
+
+button{
+    margin-top: 5%;
+    color: rgb(39, 39, 39);
+    font-size: 1.1em;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    border: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:850px) {
+
+    .padre{
+        width: 100%;
+    }
+}
+
+@media (max-width:657px) {
+    .user-image{
+    flex-direction: column;
+    align-content: stretch;
+    align-items: center;
+
+    }
+
+    .image{
+        margin-top: 20px;
+    }
+
+}
