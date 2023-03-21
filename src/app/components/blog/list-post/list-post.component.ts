@@ -15,8 +15,9 @@ export class ListPostComponent implements OnInit {
 
   constructor(private blogService: BlogService, private router: Router){}
   ngOnInit(): void {
-    this.allPost()
     this.tokenValid()
+    this.allPost()
+    
   }
   
   tokenValid(){
@@ -48,6 +49,14 @@ export class ListPostComponent implements OnInit {
 
   editar(id: string){
 
+  }
+
+  logout(){
+    localStorage.removeItem("auth_token");
+    setTimeout(() =>{
+      window.location.reload()
+      this.router.navigateByUrl('/')
+    },10)
   }
   
 }

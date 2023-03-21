@@ -1,10 +1,9 @@
 .padre{
-    margin-top: 100px;
-    margin-left: 10%;
-    margin-right: 10%;
+    margin: 120px auto 30px auto;
     padding: 20px;
     text-align: center;
     background-color: rgb(39, 39, 39);
+    max-width: 1200px;
     
 }
 
@@ -72,9 +71,9 @@ h5{
       font-size: 1rem;
     }
     .padre{
-        width: 90%;
-        margin-left: 5%;
-        margin-right: 5%;
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
     }
     .cards{
         margin: 0%;

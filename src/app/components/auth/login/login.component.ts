@@ -46,7 +46,10 @@ export class LoginComponent implements OnInit{
       const token = resp.token
       if(token !== null){
         window.localStorage.setItem('auth_token', token!)
-        this.router.navigateByUrl('/panel');
+        setTimeout(() =>{
+          window.location.reload()
+          this.router.navigateByUrl('/panel');
+        },10)
       }
     },
     error => {

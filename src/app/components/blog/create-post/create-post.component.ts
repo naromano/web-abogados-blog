@@ -53,8 +53,7 @@ export class CreatePostComponent implements OnInit{
 
     this.blogService.createPost(post)?.subscribe(resp =>{
       Swal.fire(
-        'Publicacion Creada',
-        'success'
+        'Publicacion Creada'
       )
       const id = resp.id
       this.router.navigateByUrl(`/publicacion/${id}`);
