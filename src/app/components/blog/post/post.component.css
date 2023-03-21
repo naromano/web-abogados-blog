@@ -1,17 +1,21 @@
 .padre{
-    margin-top: 10%;
-    margin-left: 5%;
-    margin-right: 5%;
-    color: rgba(255,255,255,.5);
-    width: 90%;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
+    color: rgba(235, 237, 236);
+    width: 80%;
     background-color: #212529;
     display: flex;
     flex-direction: column;
 }
 
 h1{
-    font-size: 40pt;
+    
+    font-weight: 300;
     text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 40pt;
 }
 .img-user-date{
     
@@ -23,28 +27,86 @@ h1{
 }
 
 .image{
-    width: 50%;
+    width: 100%;
     margin: 1.5%;
     text-align: center;
 
 }
 
 img{
-    width: 80%; 
+    width: 100%; 
 }
 
 .user-date{
     width: 50%;
     margin: 1.5%;
-    font-size: 1.6vw;
+    font-size: 15px;
+    font-family: 'Jost', sans-serif;
+    text-align: center;
+    text-indent: 10px;
     display: flex;
-    align-content: center;
     flex-wrap: nowrap;
     flex-direction: column;
+    align-items: flex-start;
     
 }
 
 .inner{
     margin: 3%;
-    font-size: 4.6hw;
+    font-size: 20px;
+    font-family: 'Jost', sans-serif;
+}
+
+
+
+@media (max-width:850px) {
+
+    h1{
+        font-size: 35px;
+        width: 97%;
+        margin: 1.5%;
+
+    }
+
+    .image{
+        width: 97%;
+    }
+
+    .user-date{
+        flex-direction: column-reverse;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width:657px) {
+    .padre{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+        padding: 20px;
+
+    }
+
+    h1{
+        font-size: 25px;
+        width: 97%;
+        margin: 1.5%;
+
+    }
+
+    .img-user-date{
+        flex-direction: column;
+    }
+    .image{
+        width: 97%;
+    }
+    .user-date{
+        width: 97%;
+        font-size: 15px;
+        align-items: flex-end;
+    }
+
+    .inner{
+        font-size: 15px;
+    }
 }

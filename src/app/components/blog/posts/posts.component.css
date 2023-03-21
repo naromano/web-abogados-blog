@@ -1,10 +1,21 @@
 .padre{
-    margin-top: 10%;
+    margin-top: 100px;
+    margin-left: 10%;
+    margin-right: 10%;
+    padding: 20px;
     text-align: center;
+    background-color: rgb(39, 39, 39);
+    
 }
 
 h1{
-    color: antiquewhite;
+    width: fit-content;
+    color: rgb(221, 223, 230); ;
+    border-bottom: 1px solid rgb(221, 223, 230);
+    display: inline-block;
+    font-weight: 300;
+    font-size: 35px;
+    font-family: 'Roboto', sans-serif;
 }
 
 .cards{
@@ -12,8 +23,9 @@ h1{
     flex-direction: row;
     flex-wrap: wrap;
     margin: 5%;
-    background-color: aqua;
+    border: rgba(235, 237, 236); ;
     justify-content: center;
+    margin-top: 30px;
     
 
 }
@@ -21,9 +33,74 @@ h1{
 .card{
     margin: 3%;
     width: 25%;
-    color: aliceblue;
-    background-color: #212529;
+    color: rgba(235, 237, 236);
+    border: solid 1px;
+    background-color: rgb(39, 39, 39);
+}
+.card:hover{
+    transform: scale(1.05);
 }
 
-.card-img-top{
+@media (max-width:1400px) {
+    h1{
+        font-size: 30px;
+    }
+    .card{
+        width:40%
+    }
+
+}
+
+@media (max-width:866px) {
+    .card-title{
+      font-size: 1rem;
+    }
+    .padre{
+        width: 90%;
+        margin-left: 5%;
+        margin-right: 5%;
+    }
+    .cards{
+        margin: 0%;
+    }
+
+    .card{
+        width:40%
+    }
+
+    
+}
+
+@media (max-width:750px) {
+    .padre{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .cards{
+        width: 90%;
+        margin: auto;
+    }
+    .card{
+        width: 40%;
+    }
+
+    
+}
+
+@media (max-width:670px) {
+    .padre{
+        width: 100%;
+        margin-left: 0%;
+        margin-right: 0%;
+    }
+    .cards{
+        width: 90%;
+        margin: auto;
+    }
+    .card{
+        width: 100%;
+    }
+
+    
 }
