@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { BlogService } from 'src/app/services/blog.service';
-import Swal from 'sweetalert2';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-posts',
@@ -11,7 +11,7 @@ export class PostsComponent implements OnInit {
 
   allposts: any = []
   
-  constructor(private blogService: BlogService){
+  constructor(private blogService: BlogService, private spinner: NgxSpinnerService){
     
   }
   ngOnInit(): void {
@@ -20,10 +20,10 @@ export class PostsComponent implements OnInit {
 
   allPost(){
 
-    Swal.showLoading()
+    this.spinner.show()
     this.blogService.allPosts().subscribe(resp => {
       this.allposts = resp
-      Swal.close()
+      this.spinner.hide()
     })
   }
 

@@ -4,7 +4,7 @@ import { catchError, throwError } from 'rxjs';
 import { singInModel } from 'src/app/models/auth';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
-import Swal from 'sweetalert2';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-login',
@@ -16,7 +16,7 @@ export class LoginComponent implements OnInit{
   authToken = localStorage.getItem("auth_token")
 
 
-  constructor (private fb: UntypedFormBuilder, private authSevice: AuthService, private router: Router) {
+  constructor (private fb: UntypedFormBuilder, private authSevice: AuthService, private router: Router, private spinner: NgxSpinnerService) {
     
   }
   ngOnInit(): void {
@@ -38,11 +38,11 @@ export class LoginComponent implements OnInit{
       email: this.myForm.get("email")?.value,
       password: this.myForm.get("password")?.value
     }
-    Swal.showLoading();
+    this.spinner.show()
 
     this.authSevice.singIn(login)
     .subscribe(resp => {
-      Swal.close();
+      this.spinner.hide()
       const token = resp.token
       if(token !== null){
         window.localStorage.setItem('auth_token', token!)
@@ -53,7 +53,6 @@ export class LoginComponent implements OnInit{
       }
     },
     error => {
-      Swal.fire(error.error.error)
     });
 
   }

@@ -6,6 +6,7 @@ import { FormsModule } from '@angular/forms';
 import { CKEditorModule } from 'ng2-ckeditor';
 import { AppRouterModule } from './routes.module';
 import { HttpClientModule } from '@angular/common/http';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 
 
@@ -52,7 +53,7 @@ import { EditPostComponent } from './components/blog/edit-post/edit-post.compone
     RegisterComponent,
     PostComponent,
     PostsComponent,
-    EditPostComponent
+    EditPostComponent,
 
 
   ],
@@ -64,7 +65,9 @@ import { EditPostComponent } from './components/blog/edit-post/edit-post.compone
     AppRouterModule,
     HttpClientModule,
     provideFirebaseApp(() => initializeApp(environment.firebase)),
-    provideStorage(() => getStorage())
+    provideStorage(() => getStorage()),
+    
+    NgxSpinnerModule
   ],
   providers: [
     TeamService

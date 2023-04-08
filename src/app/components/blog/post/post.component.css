@@ -15,7 +15,7 @@ h1{
     font-weight: 300;
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    font-size: 40px;
+    font-size: 3rem;
 }
 .img-user-date{
     
@@ -61,9 +61,12 @@ img{
 
 
 @media (max-width:850px) {
+    .inner span{
+        font-size: 10px;
+    }
 
     h1{
-        font-size: 35px;
+        font-size: 2rem;
         width: 97%;
         margin: 1.5%;
 
@@ -89,7 +92,6 @@ img{
     }
 
     h1{
-        font-size: 25px;
         width: 97%;
         margin: 1.5%;
 

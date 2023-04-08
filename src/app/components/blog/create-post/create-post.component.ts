@@ -5,8 +5,8 @@ import { PostModel } from 'src/app/models/post';
 import { BlogService } from 'src/app/services/blog.service';
 import { Storage, ref, getDownloadURL } from '@angular/fire/storage'
 import { uploadBytes } from '@firebase/storage';
-import Swal from 'sweetalert2';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-create-post',
@@ -17,7 +17,7 @@ export class CreatePostComponent implements OnInit{
   
   authToken = localStorage.getItem("auth_token")
 
-  constructor (private fb: UntypedFormBuilder, private sanitizer: DomSanitizer, private blogService: BlogService, private storage: Storage, private router: Router) {
+  constructor (private fb: UntypedFormBuilder, private sanitizer: DomSanitizer, private blogService: BlogService, private storage: Storage, private router: Router, private spinner: NgxSpinnerService) {
     
   }
   ngOnInit(): void {
@@ -41,7 +41,7 @@ export class CreatePostComponent implements OnInit{
   }
 
   createPost(){
-    Swal.showLoading();
+    this.spinner.show()
     const post: PostModel = {
       title: this.myForm.get("title")?.value,
       image: this.imagePost,
@@ -52,7 +52,7 @@ export class CreatePostComponent implements OnInit{
     }
 
     this.blogService.createPost(post)?.subscribe(resp =>{
-      Swal.fire(
+      window.alert(
         'Publicacion Creada'
       )
       const id = resp.id
@@ -62,7 +62,7 @@ export class CreatePostComponent implements OnInit{
   }
 
   uploadImage($event: any){
-    Swal.showLoading()
+    this.spinner.hide()
     const file = $event.target.files[0];
     
     const imgRef = ref(this.storage, `images/posts/${file.name}`);
@@ -70,7 +70,7 @@ export class CreatePostComponent implements OnInit{
     .then(async resp =>{
       const url = await getDownloadURL(imgRef)
       this.imagePost = url
-      Swal.close()
+      this.spinner.show()
 
     } )
     .catch(error => console.log(error))

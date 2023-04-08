@@ -1,3 +1,10 @@
+<ngx-spinner class="centrado"
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+>
+<p style="font-size: 20px; color: white">Cargando...</p>
+</ngx-spinner>
 <div class="padre">
 <h4>CREAR NUEVA PUBLICACION</h4>
 <form class="form" (ngSubmit)="createPost()" [formGroup]="myForm">
@@ -21,7 +28,7 @@
         <input class="form-control" type="text" placeholder="Titulo" formControlName="title">
     <div class="text">
         <h2>TEXTO</h2>
-    <ckeditor class="editor" formControlName="text" #ckeditor></ckeditor>
+    <ckeditor class="editor" [config]="{ forcePasteAsPlainText: false,pasteFromWordRemoveStyles: false }" formControlName="text" #ckeditor></ckeditor>
   </div>
   </div>
     <button type="submit" mat-raised-button color="primary">Crear Publicacion</button>

@@ -8,22 +8,9 @@ import { Router } from '@angular/router';
 })
 export class NavbarComponent implements OnInit {
   authToken = localStorage.getItem("auth_token");
-  exist = false;
 
   constructor() {}
   ngOnInit(): void {
-    console.log(this.authToken)
-    this.tokenExist()
 
   }
-
-  tokenExist(){
-    if(this.authToken === null){
-      this.exist = true;
-    }else{
-      this.exist = false;
-    }
-  }
-
-
 }
