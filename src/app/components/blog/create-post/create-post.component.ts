@@ -41,6 +41,9 @@ export class CreatePostComponent implements OnInit{
   }
 
   createPost(){
+    
+
+    if(this.myForm.valid){
     this.spinner.show()
     const post: PostModel = {
       title: this.myForm.get("title")?.value,
@@ -58,6 +61,9 @@ export class CreatePostComponent implements OnInit{
       const id = resp.id
       this.router.navigateByUrl(`/publicacion/${id}`);
     })
+  }else{
+    window.alert("Faltan completar campos")
+  }
 
   }
 

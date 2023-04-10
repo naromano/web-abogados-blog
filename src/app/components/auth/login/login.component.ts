@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { UntypedFormBuilder, UntypedFormGroup, Validators } from '@angular/forms';
-import { catchError, throwError } from 'rxjs';
 import { singInModel } from 'src/app/models/auth';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
@@ -53,6 +52,7 @@ export class LoginComponent implements OnInit{
       }
     },
     error => {
+      window.alert(error)
     });
 
   }

@@ -1,1 +1,29 @@
+<ngx-spinner class="centrado"
+bdColor="rgba(51,51,51,0.8)"
+size="medium"
+color="#fff"
+>
+<p style="font-size: 20px; color: white">Cargando...</p>
+</ngx-spinner>
 
+<div class="padre">
+
+    <div class="register">
+
+        <button class="back" (click)="back()">Volver</button>
+<h1>Registrar Usuario</h1>
+
+<form class="form" (ngSubmit)="singUp()" [formGroup]="myForm">
+
+    <input class="form-control" type="text" placeholder="Nombre Completo" formControlName="name">
+ 
+    <input class="form-control" type="email" placeholder="Email" formControlName="email">
+
+    <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+
+<button type="submit" mat-raised-button color="primary">Registrar</button>
+
+</form>
+</div>
+
+</div>

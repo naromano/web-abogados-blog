@@ -11,24 +11,27 @@ color="#fff"
   <div class="user-image">
     <div class="user">
         <h2>Usuario Creador:</h2>
-        <select class="selectInput" name="select" formControlName="user">
-            <option></option>
-            <option value="Nicolas Romano">Nicolas Romano</option>
-            <option value="Eduardo Romano">Eduardo Romano</option>
-            <option value="Vercelli Juan Cruz">Vercelli Juan Cruz</option>
+        <select class="selectInput" name="select" formControlName="user" required>
+          <option>Selecciona una opcion</option>
+          <option value="Agneni Rodolfo">Agneni Rodolfo</option>
+          <option value="Carrazco Monica">Carrazco Monica</option>
+          <option value="Gallardo Miriam">Gallardo Miriam</option>
+          <option value="Maradona Alejandra">Maradona Alejandra</option>
+          <option value="Ponce Leonardo">Ponce Leonardo</option>
+          <option value="Vercelli Juan Cruz">Vercelli Juan Cruz</option>
           </select>
     </div>
     <div class="image">
         <h2>SUBIR IMAGEN</h2>
-        <input class="imageInput form-control" type="file" (change)="uploadImage($event)" formControlName="image">
+        <input class="imageInput form-control" type="file" (change)="uploadImage($event)" formControlName="image" required>
     </div>
   </div>
   <div class="title-text">
         <h2>TITULO</h2>
-        <input class="form-control" type="text" placeholder="Titulo" formControlName="title">
+        <input class="form-control" type="text" placeholder="Titulo" formControlName="title" required>
     <div class="text">
         <h2>TEXTO</h2>
-    <ckeditor class="editor" [config]="{ forcePasteAsPlainText: false,pasteFromWordRemoveStyles: false }" formControlName="text" #ckeditor></ckeditor>
+    <ckeditor class="editor" [config]="{ forcePasteAsPlainText: false,pasteFromWordRemoveStyles: false }" formControlName="text" #ckeditor required></ckeditor>
   </div>
   </div>
     <button type="submit" mat-raised-button color="primary">Crear Publicacion</button>

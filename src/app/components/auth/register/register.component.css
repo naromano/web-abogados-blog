@@ -1,0 +1,50 @@
+.padre{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.register{
+    width: 30%;
+}
+input{
+    margin-top: 5%;
+}
+
+h1{
+    color: rgb(214, 214, 214);
+}
+
+.centrado {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
+
+button{
+    margin-top: 5%;
+    color: rgb(39, 39, 39);
+    font-size: 1.1em;
+    background-color: rgb(214, 214, 214);
+    border-radius: 5px;
+    border: none;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+@media (max-width:850px) {
+    .register{
+        width: 50%;
+    }
+
+    
+}
+
+@media (max-width:657px) {
+
+    .register{
+        width: 70%;
+    }
+    }
