@@ -110,12 +110,15 @@ export class ListPostComponent implements OnInit {
 
 
   delete(id: string){
+    if(confirm("Seguro que quieres eliminar?")){
     this.spinner.show()
     this.blogService.deletePost(id)?.subscribe()
     setTimeout(() =>{
       window.location.reload()
       this.spinner.hide()
     },1000)
+
+  }
     
 
 
