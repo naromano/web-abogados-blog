@@ -1,0 +1,24 @@
+.padre{
+    margin-top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+}
+
+h1{
+    margin-bottom: 40px;
+    color: rgb(214, 214, 214);
+}
+.table{
+    
+margin: auto;
+color: rgb(214, 214, 214);
+}
+
+.eliminarButtom{
+    max-width: 80px;
+    background-color: red;
+    text-align: center;
+}

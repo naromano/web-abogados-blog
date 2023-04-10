@@ -52,7 +52,8 @@ export class LoginComponent implements OnInit{
       }
     },
     error => {
-      window.alert(error)
+      this.spinner.hide()
+      window.alert("Email y/o contraseña incorrectos")
     });
 
   }

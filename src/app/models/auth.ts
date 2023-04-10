@@ -9,3 +9,9 @@ export class singUpModel{
     password?: string;
 
 }
+
+export class User{
+    id?: string;
+    name?: string;
+    email?: string;
+}

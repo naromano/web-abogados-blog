@@ -10,20 +10,22 @@ color="#fff"
 
     <div class="register">
 
-        <button class="back" (click)="back()">Volver</button>
-<h1>Registrar Usuario</h1>
+            <button class="back" (click)="back()">Volver</button>
+            <h1>Crear Usuario</h1>
 
-<form class="form" (ngSubmit)="singUp()" [formGroup]="myForm">
+     <form class="form" (ngSubmit)="singUp()" [formGroup]="myForm">
 
-    <input class="form-control" type="text" placeholder="Nombre Completo" formControlName="name">
+     <input class="form-control" type="text" placeholder="Nombre Completo" formControlName="name">
  
-    <input class="form-control" type="email" placeholder="Email" formControlName="email">
+        <input class="form-control" type="email" placeholder="Email" formControlName="email">
 
-    <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
+        <input class="form-control" type="password" placeholder="Contraseña" formControlName="password">
 
-<button type="submit" mat-raised-button color="primary">Registrar</button>
+        <button type="submit" mat-raised-button color="primary">Crear</button>
 
-</form>
+    </form>
 </div>
 
 </div>
+
+<app-users class="users"></app-users>

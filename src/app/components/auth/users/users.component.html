@@ -1,0 +1,26 @@
+
+
+<div class="padre">
+
+  <h1>Eliminar Usuario</h1>
+  <div style="width: 100%; overflow-x: auto;">
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Usuario</th>
+        <th scope="col">Email</th>
+        <th scope="col">Eliminar</th>        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users; let i = index" >
+        <th scope="row">{{i+1}}</th>
+        <td class="user">{{user.name}}</td>
+        <td class="title">{{user.email}}</td>
+        <td> <button class="eliminarButtom" (click)="deleteUser(user.id)">Eliminar</button></td>
+      </tr>
+    </tbody>
+  </table>
+  </div>
+</div>

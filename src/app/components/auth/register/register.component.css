@@ -34,6 +34,10 @@ button{
     margin-right: auto;
 }
 
+.users{
+    width: 80%;
+}
+
 @media (max-width:850px) {
     .register{
         width: 50%;

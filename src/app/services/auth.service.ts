@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import {  singInModel, singUpModel } from '../models/auth';
+import {  singInModel, singUpModel, User } from '../models/auth';
 
 @Injectable({
   providedIn: 'root'
@@ -23,4 +23,21 @@ export class AuthService {
     return this.http.post<singUpModel>(`${this.url}api/auth/register`, singUp)
 
    }
+
+   allUsers(){
+
+    return this.http.get(`${this.url}api/auth/allusers`)
+
+   }
+
+   deleteUser(id: string){
+
+    const token = localStorage.getItem('auth_token')
+    if(token){
+    return this.http.delete(`${this.url}api/auth/user/${id}`,{ headers: {auth_token: token} })
+    }
+    return null
+
+  }
+
 }

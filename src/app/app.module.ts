@@ -36,6 +36,7 @@ import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { environment } from '../environments/environment';
 import { provideStorage,getStorage } from '@angular/fire/storage';
 import { EditPostComponent } from './components/blog/edit-post/edit-post.component';
+import { UsersComponent } from './components/auth/users/users.component';
 
 
 
@@ -56,6 +57,7 @@ import { EditPostComponent } from './components/blog/edit-post/edit-post.compone
     PostComponent,
     PostsComponent,
     EditPostComponent,
+    UsersComponent
 
 
   ],
