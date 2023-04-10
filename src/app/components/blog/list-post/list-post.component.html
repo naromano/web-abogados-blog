@@ -9,15 +9,15 @@ color="#fff"
 <div class="padre">
   <h1>PANEL</h1>
   <div class="panelButtons">
-<button routerLink="/publicacion/nuevo">Crear publicacion nueva</button>
-<button routerLink="/register">Registrar Persona</button>
-<button (click)="logout()">Cerrar Sesion</button>
+<button class="buttonPanel" routerLink="/publicacion/nuevo">Crear publicacion nueva</button>
+<button class="buttonPanel" routerLink="/register">Registrar Persona</button>
+<button class="buttonPanel" (click)="logout()">Cerrar Sesion</button>
 </div>
-
+<div style="width: 100%; overflow-x: auto;">
 <table class="table">
     <thead>
       <tr>
-        <th scope="col">#</th>
+        <th scope="col">Fecha Creacion</th>
         <th scope="col">Usuario Creador</th>
         <th scope="col">Titulo</th>
         <th scope="col">Editar</th>
@@ -25,15 +25,21 @@ color="#fff"
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let post of allposts ; let i = index" >
-        <th scope="row">{{i+1}}</th>
+      <tr *ngFor="let post of getCurrentPageItems(); let i = index" >
+        <th scope="row">{{post.date}}</th>
         <td class="user">{{post.user}}</td>
         <td class="title">{{post.title}}</td>
         <td> <button  class="editarButtom" (click)="editar(post.id)">Editar</button></td>
         <td> <button class="eliminarButtom" (click)="delete(post.id)">Eliminar</button></td>
-        
-
       </tr>
     </tbody>
   </table>
+</div>
+</div>
+
+<div class="pagination">
+  <button class="btn btn-secondary" [disabled]="currentPage == 1" (click)="onPrev()">Anterior</button>
+  <button class="btn btn-secondary" *ngFor="let page of getPagesToShow()" [class.active]="currentPage == page"
+          (click)="goToPage(page)">{{page}}</button>
+  <button class="btn btn-secondary" [disabled]="currentPage == totalPages" (click)="onNext()">Siguiente</button>
 </div>

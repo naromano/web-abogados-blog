@@ -62,7 +62,7 @@ export class CreatePostComponent implements OnInit{
   }
 
   uploadImage($event: any){
-    this.spinner.hide()
+    this.spinner.show()
     const file = $event.target.files[0];
     
     const imgRef = ref(this.storage, `images/posts/${file.name}`);
@@ -70,7 +70,7 @@ export class CreatePostComponent implements OnInit{
     .then(async resp =>{
       const url = await getDownloadURL(imgRef)
       this.imagePost = url
-      this.spinner.show()
+      this.spinner.hide()
 
     } )
     .catch(error => console.log(error))

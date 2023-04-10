@@ -7,6 +7,8 @@ import { CKEditorModule } from 'ng2-ckeditor';
 import { AppRouterModule } from './routes.module';
 import { HttpClientModule } from '@angular/common/http';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 
 
 
@@ -67,7 +69,8 @@ import { EditPostComponent } from './components/blog/edit-post/edit-post.compone
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideStorage(() => getStorage()),
     
-    NgxSpinnerModule
+    NgxSpinnerModule,
+    BrowserAnimationsModule
   ],
   providers: [
     TeamService

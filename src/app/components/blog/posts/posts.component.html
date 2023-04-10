@@ -10,7 +10,7 @@ color="#fff"
     <h1>PUBLICACIONES</h1>
     
         <div class="cards">
-          <div *ngFor="let post of allposts" class="card" routerLink="/publicacion/{{post.id}}">
+          <div *ngFor="let post of getCurrentPageItems()" class="card" routerLink="/publicacion/{{post.id}}">
             <img src="{{post.image}}" class="card-img-top" alt="...">
             <div class="card-body">
               <h5 class="card-title">{{post.title}}</h5>
@@ -20,6 +20,14 @@ color="#fff"
             </div>
             </div>
           </div>  
+          
+
+</div>
+<div class="pagination">
+  <button class="btn btn-secondary" [disabled]="currentPage == 1" (click)="onPrev()">Anterior</button>
+  <button class="btn btn-secondary" *ngFor="let page of getPagesToShow()" [class.active]="currentPage == page"
+          (click)="goToPage(page)">{{page}}</button>
+  <button class="btn btn-secondary" [disabled]="currentPage == totalPages" (click)="onNext()">Siguiente</button>
 </div>
 
 
